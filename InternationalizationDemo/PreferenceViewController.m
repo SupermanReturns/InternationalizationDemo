@@ -167,7 +167,15 @@
 }
 //修改searchBar中的文字为多语言
 - (void)changeSearchBarCancleText:(UISearchBar *)searchBar {
-    
+    for (UIView *view in [[searchBar.subviews lastObject] subviews]) {
+        if ([view isKindOfClass:[UIButton class]]) {
+            UIButton *cancelBtn=(UIButton *)view;
+            
+            [cancelBtn setTitle:kLocalizedString(@"cancel", @"取消") forState:UIControlStateNormal];
+            [cancelBtn setTitle:kLocalizedString(@"cancel",@"取消") forState:UIControlStateNormal];
+            
+        }
+    }
 }
 #pragma mark - 自定义方法
 //根据搜索词来查找符合的数据
@@ -183,7 +191,23 @@
         }
     }];
 }
-
+// 设置文字中关键字高亮
+- (NSMutableAttributedString *)searchTitle:(NSString *)title key:(NSString *)key keyColor:(UIColor *)keyColor {
+    NSMutableAttributedString *titleStr=[[NSMutableAttributedString alloc]initWithString:title];
+    NSString *copyStr=title;
+    
+    NSMutableString *xxstr=[NSMutableString new];
+    for (int i=0; i<key.length; i++) {
+        [xxstr appendString:@"*"];
+    }
+    while ([copyStr rangeOfString:key options:NSCaseInsensitiveSearch].location !=NSNotFound) {
+        NSRange range=[copyStr rangeOfString:key options:NSCaseInsensitiveSearch];
+        [titleStr addAttribute:NSForegroundColorAttributeName value:keyColor range:range];
+        
+        copyStr =[copyStr stringByReplacingCharactersInRange:NSMakeRange(range.location, range.length) withString:xxstr];
+    }
+    return titleStr;
+}
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
