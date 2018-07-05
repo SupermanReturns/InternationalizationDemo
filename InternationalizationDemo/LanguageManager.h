@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 #define ChangeLanguageNotificationName @"changeLanguage"
-#define kLocalizedString(key, comment) [LanguageManager localizedStringForKey:key value:comment]
+#define kLocalizedString(key, comment) [SLanguageManager localizedStringForKey:key value:comment]
 
 @interface LanguageManager : NSObject
 
@@ -26,7 +26,7 @@
 
 + (instancetype)shareInstance;
 
-#define LanguageManager [LanguageManager shareInstance]
+#define SLanguageManager [LanguageManager shareInstance]
 
 
 @end

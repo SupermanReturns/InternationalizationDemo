@@ -17,6 +17,8 @@
 		CF339F3F20ECABDB005E0A51 /* InternationalizationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339F3E20ECABDB005E0A51 /* InternationalizationDemoUITests.m */; };
 		CF339F4E20ECB06E005E0A51 /* LanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339F4D20ECB06E005E0A51 /* LanguageManager.m */; };
 		CF339F5120ECB0BA005E0A51 /* PreferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339F5020ECB0BA005E0A51 /* PreferenceViewController.m */; };
+		CF339F5520EDC8A1005E0A51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF339F5720EDC8A1005E0A51 /* Localizable.strings */; };
+		CF339F5F20EDCD6B005E0A51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF339F6120EDCD6B005E0A51 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,12 @@
 		CF339F4D20ECB06E005E0A51 /* LanguageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LanguageManager.m; sourceTree = "<group>"; };
 		CF339F4F20ECB0BA005E0A51 /* PreferenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceViewController.h; sourceTree = "<group>"; };
 		CF339F5020ECB0BA005E0A51 /* PreferenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferenceViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
+		CF339F5920EDC8DE005E0A51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CF339F5B20EDCBC6005E0A51 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CF339F5C20EDCC6D005E0A51 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CF339F6020EDCD6B005E0A51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CF339F6220EDCD70005E0A51 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		CF339F6320EDCD72005E0A51 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,7 @@
 				CF339F4D20ECB06E005E0A51 /* LanguageManager.m */,
 				CF339F4F20ECB0BA005E0A51 /* PreferenceViewController.h */,
 				CF339F5020ECB0BA005E0A51 /* PreferenceViewController.m */,
+				CF339F5220EDC796005E0A51 /* Language */,
 				CF339F2020ECABCF005E0A51 /* Main.storyboard */,
 				CF339F2320ECABDA005E0A51 /* Assets.xcassets */,
 				CF339F2520ECABDA005E0A51 /* LaunchScreen.storyboard */,
@@ -140,6 +149,15 @@
 				CF339F4020ECABDB005E0A51 /* Info.plist */,
 			);
 			path = InternationalizationDemoUITests;
+			sourceTree = "<group>";
+		};
+		CF339F5220EDC796005E0A51 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				CF339F5720EDC8A1005E0A51 /* Localizable.strings */,
+				CF339F6120EDCD6B005E0A51 /* InfoPlist.strings */,
+			);
+			path = Language;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +245,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = CF339F0E20ECABCF005E0A51;
 			productRefGroup = CF339F1820ECABCF005E0A51 /* Products */;
@@ -246,8 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF339F2720ECABDA005E0A51 /* LaunchScreen.storyboard in Resources */,
+				CF339F5520EDC8A1005E0A51 /* Localizable.strings in Resources */,
 				CF339F2420ECABDA005E0A51 /* Assets.xcassets in Resources */,
 				CF339F2220ECABCF005E0A51 /* Main.storyboard in Resources */,
+				CF339F5F20EDCD6B005E0A51 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +350,26 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		CF339F5720EDC8A1005E0A51 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF339F5920EDC8DE005E0A51 /* en */,
+				CF339F5B20EDCBC6005E0A51 /* zh-Hans */,
+				CF339F5C20EDCC6D005E0A51 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CF339F6120EDCD6B005E0A51 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF339F6020EDCD6B005E0A51 /* en */,
+				CF339F6220EDCD70005E0A51 /* zh-Hans */,
+				CF339F6320EDCD72005E0A51 /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -335,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -393,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -448,6 +492,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 78S8WECG83;
 				INFOPLIST_FILE = InternationalizationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,6 +510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 78S8WECG83;
 				INFOPLIST_FILE = InternationalizationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

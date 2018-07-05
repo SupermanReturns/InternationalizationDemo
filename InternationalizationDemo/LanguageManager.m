@@ -11,21 +11,23 @@
 #define NSLocalizedStringTableName @"Localizable"
 #define UserLanguage @"userLanguage"
 
-@interface LanguageManager()
+@interface LanguageManager ()
 
 @property (nonatomic,strong) NSBundle *bundle;
 
 @end
+
+
 @implementation LanguageManager
 
 
 +(instancetype)shareInstance{
-    static LanguageManager *manager=nil;
+    static LanguageManager *_manager=nil;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
-        manager=[[self alloc]init];
+        _manager=[[self alloc]init];
     });
-    return manager;
+    return _manager;
 }
 
 -(void)initUserLanguage{
@@ -69,7 +71,7 @@
 }
 
 - (void)changeBundle:(NSString *)language {
-    NSString *path=[[NSBundle mainBundle]pathForResource:language ofType:@"lproj"];
+    NSString *path=[[NSBundle mainBundle]pathForResource:[self languageFormat:language] ofType:@"lproj"];
     _bundle=[NSBundle bundleWithPath:path];
 }
 

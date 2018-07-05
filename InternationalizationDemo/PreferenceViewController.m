@@ -35,7 +35,7 @@
     [self.view addSubview:self.tableView];
     
     __weak __typeof(self) weakSelf =self;
-    LanguageManager.completion = ^(NSString *currentLanguage){
+    SLanguageManager.completion = ^(NSString *currentLanguage){
         __strong __typeof(self)self =weakSelf;
         [self changeLanguage];
     };
@@ -44,8 +44,6 @@
     return @[@"zh-Hans-CN", //中文简体
              @"zh-Hant-CN", //中文繁体
              @"en-CN", //英语
-             @"ko-CN", //韩语
-             @"ja-CN" //日语
              ];
 }
 - (void)changeLanguage {
@@ -57,15 +55,15 @@
 }
 ////对应国家的语言
 - (NSString *)ittemCountryLanguage:(NSString *)lang {
-    NSString *language=[LanguageManager languageFormat:lang];
+    NSString *language=[SLanguageManager languageFormat:lang];
     NSString *countryLanguage=[[[NSLocale alloc]initWithLocaleIdentifier:language]displayNameForKey:NSLocaleIdentifier value:language];
     return countryLanguage;
 }
 ////当前语言下的对应国家语言翻译
 - (NSString *)ittemCurrentLanguageName:(NSString *)lang {
-    NSString *language=[LanguageManager languageFormat:lang];
+    NSString *language=[SLanguageManager languageFormat:lang];
     
-    NSString *currentLanguage=LanguageManager.currentLanguage;
+    NSString *currentLanguage=SLanguageManager.currentLanguage;
     NSString *currentLanguageName=[[[NSLocale alloc]initWithLocaleIdentifier:currentLanguage] displayNameForKey:NSLocaleIdentifier value:language];
     return currentLanguageName;
 }
@@ -88,7 +86,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"CellID"];
     }
-    NSString *language = [LanguageManager languageFormat:self.dataAry[indexPath.row]];
+    NSString *language = [SLanguageManager languageFormat:self.dataAry[indexPath.row]];
     //对应国家的语言
     NSString *countryLanguage = [self ittemCountryLanguage:self.dataAry[indexPath.row]];
     //当前语言下的对应国家语言翻译
@@ -106,7 +104,7 @@
     }
     
     //当前语言
-    NSString *currentLanguage = LanguageManager.currentLanguage;
+    NSString *currentLanguage = SLanguageManager.currentLanguage;
     
     if([currentLanguage rangeOfString:language].location != NSNotFound)
     {
@@ -125,7 +123,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString *language=self.dataAry[indexPath.row];
-    [LanguageManager setUserlanguage:language];
+    [SLanguageManager setUserlanguage:language];
     
     [self  cancleButtonAction:nil];
 }
@@ -162,7 +160,7 @@
 }
 //搜索结果按钮点击的回调
 - (void)searchBarResultsListButtonClicked:(UISearchBar *)searchBar {
-    [LanguageManager setUserlanguage:searchBar.text];
+    [SLanguageManager setUserlanguage:searchBar.text];
     [self cancleButtonAction:nil];
 }
 //修改searchBar中的文字为多语言
@@ -173,7 +171,8 @@
             
             [cancelBtn setTitle:kLocalizedString(@"cancel", @"取消") forState:UIControlStateNormal];
             [cancelBtn setTitle:kLocalizedString(@"cancel",@"取消") forState:UIControlStateNormal];
-            
+            [cancelBtn setTitle:kLocalizedString(@"cancel",@"取消") forState:UIControlStateSelected];
+            [cancelBtn setTitle:kLocalizedString(@"cancel",@"取消") forState:UIControlStateDisabled];
         }
     }
 }
