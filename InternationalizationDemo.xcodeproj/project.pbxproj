@@ -15,6 +15,8 @@
 		CF339F2A20ECABDA005E0A51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339F2920ECABDA005E0A51 /* main.m */; };
 		CF339F3420ECABDA005E0A51 /* InternationalizationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339F3320ECABDA005E0A51 /* InternationalizationDemoTests.m */; };
 		CF339F3F20ECABDB005E0A51 /* InternationalizationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339F3E20ECABDB005E0A51 /* InternationalizationDemoUITests.m */; };
+		CF339F4E20ECB06E005E0A51 /* LanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339F4D20ECB06E005E0A51 /* LanguageManager.m */; };
+		CF339F5120ECB0BA005E0A51 /* PreferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF339F5020ECB0BA005E0A51 /* PreferenceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		CF339F3A20ECABDB005E0A51 /* InternationalizationDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InternationalizationDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF339F3E20ECABDB005E0A51 /* InternationalizationDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InternationalizationDemoUITests.m; sourceTree = "<group>"; };
 		CF339F4020ECABDB005E0A51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF339F4C20ECB06E005E0A51 /* LanguageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageManager.h; sourceTree = "<group>"; };
+		CF339F4D20ECB06E005E0A51 /* LanguageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LanguageManager.m; sourceTree = "<group>"; };
+		CF339F4F20ECB0BA005E0A51 /* PreferenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreferenceViewController.h; sourceTree = "<group>"; };
+		CF339F5020ECB0BA005E0A51 /* PreferenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreferenceViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				CF339F1B20ECABCF005E0A51 /* AppDelegate.m */,
 				CF339F1D20ECABCF005E0A51 /* ViewController.h */,
 				CF339F1E20ECABCF005E0A51 /* ViewController.m */,
+				CF339F4C20ECB06E005E0A51 /* LanguageManager.h */,
+				CF339F4D20ECB06E005E0A51 /* LanguageManager.m */,
+				CF339F4F20ECB0BA005E0A51 /* PreferenceViewController.h */,
+				CF339F5020ECB0BA005E0A51 /* PreferenceViewController.m */,
 				CF339F2020ECABCF005E0A51 /* Main.storyboard */,
 				CF339F2320ECABDA005E0A51 /* Assets.xcassets */,
 				CF339F2520ECABDA005E0A51 /* LaunchScreen.storyboard */,
@@ -265,6 +275,8 @@
 				CF339F1F20ECABCF005E0A51 /* ViewController.m in Sources */,
 				CF339F2A20ECABDA005E0A51 /* main.m in Sources */,
 				CF339F1C20ECABCF005E0A51 /* AppDelegate.m in Sources */,
+				CF339F5120ECB0BA005E0A51 /* PreferenceViewController.m in Sources */,
+				CF339F4E20ECB06E005E0A51 /* LanguageManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78S8WECG83;
 				INFOPLIST_FILE = InternationalizationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78S8WECG83;
 				INFOPLIST_FILE = InternationalizationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
