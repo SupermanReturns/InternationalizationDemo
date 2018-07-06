@@ -23,7 +23,6 @@
     [super viewDidLoad];
     
     UILabel *titleLabel=[[UILabel alloc]initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-100)/2,100 ,100 ,25 )];
-    
     [self.view addSubview:titleLabel];
     _titleLabel=titleLabel;
     
@@ -39,7 +38,6 @@
     self.navigationItem.rightBarButtonItem = item;
     
     _titleLabel.text = kLocalizedString(@"welcome",@"你好 世界!");
-//    _icoImageView.image = [SLanguageManager ittemInternationalImageWithName:@"github"];
 }
 //去偏好设置界面
 - (void)gotoPreferenceViewController {

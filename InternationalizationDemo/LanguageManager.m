@@ -39,6 +39,7 @@
     }
     [self changeBundle:currentLanguage];
 }
+//设置语言
 -(void)setUserlanguage:(NSString *)language{
     if (![[self currentLanguage] isEqualToString:language]) {
         [self saveLanguage:language];
